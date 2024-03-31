@@ -1,0 +1,23 @@
+<form [formGroup]="loginForm" (ngSubmit)="logIn()" class="container mt-5 login-form">
+    <h3>Please Login</h3>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email" class="form-control">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" class="form-control">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+            <div *ngIf="password.errors?.['required']">Password is required.</div>
+            <div *ngIf="password.errors?.['minlength']">Password must be at least 9 characters long.</div>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid" class="btn btn-success btn-block btn-lg mt-3">Log In</button>
+    <button type="button" class="btn btn-danger btn-block btn-lg mt-3" (click)="resetForm()">Reset</button>
+</form>

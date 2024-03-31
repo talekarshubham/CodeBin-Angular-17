@@ -1,0 +1,60 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Adjust border radius for curved corners */
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    border-radius: 20px; /* Make buttons curved */
+    padding: 10px 20px; /* Adjust button padding for proper size */
+    margin-top: 15px; /* Increase spacing between buttons */
+    height: 45px; /* Adjust button height */
+    width: 100%; /* Make buttons full-width */
+    text-align: center; /* Center align text */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Change primary button color */
+    border-color: #007bff;
+    color: #fff; /* Add text color */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Change secondary button color */
+    border-color: #6c757d;
+    color: #fff; /* Add text color */
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+.btn:disabled {
+    opacity: 0.20; /* Reduce opacity for disabled buttons */
+    pointer-events: none; /* Disable pointer events for disabled buttons */
+}
+.button-row {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between buttons */
+}
+
+.btn {
+    flex: 1; /* Equal width for both buttons */
+    margin-top: 15px;
+    height: 45px;
+    text-align: center; /* Align button text to center */
+}
+
+.btn-primary {
+    margin-right: 10px; /* Adjust spacing between buttons */
+}

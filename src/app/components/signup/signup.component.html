@@ -1,0 +1,36 @@
+<form #register="ngForm" class="container mt-5 login-form" (ngSubmit)="signUp(register.value)">
+    <!-- <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ngModel required class="form-control">
+        <div *ngIf="register.controls['name'].invalid && (register.controls['name'].dirty || register.controls['name'].touched)" class="text-danger">
+            <div *ngIf="register.controls['name'].errors?.['required']">Name is required.</div>
+        </div>
+    </div> -->
+    <h3>Please Signup</h3>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required email class="form-control">
+        <div *ngIf="register.controls['email'].invalid && (register.controls['email'].dirty || register.controls['email'].touched)" class="text-danger">
+            <div *ngIf="register.controls['email'].errors?.['required']">Email is required.</div>
+            <div *ngIf="register.controls['email'].errors?.['email']">Invalid email format.</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" ngModel required minlength="9" class="form-control">
+        <div *ngIf="register.controls['password'].invalid && (register.controls['password'].dirty || register.controls['password'].touched)" class="text-danger">
+            <div *ngIf="register.controls['password'].errors?.['required']">Password is required.</div>
+            <div *ngIf="register.controls['password'].errors?.['minlength']">Password must be at least 9 characters long.</div>
+        </div>
+    </div>
+
+    <!-- Additional fields can be added here -->
+
+    <!-- <button type="submit" [disabled]="register.invalid" class="btn btn-primary btn-block btn-lg mt-3">Sign Up</button>
+    <button type="reset" class="btn btn-secondary btn-block btn-lg mt-3">Reset</button> -->
+    <div class="button-row">
+    <button type="submit" [disabled]="register.invalid" class="btn btn-success btn-block btn-lg mt-3">Signup</button>
+    <button type="reset" class="btn btn-danger btn-block btn-lg mt-3" >Reset</button>
+</div>
+</form>

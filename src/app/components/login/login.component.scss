@@ -1,0 +1,48 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Adjust border radius for curved corners */
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    border-radius: 20px; /* Make buttons curved */
+    padding: 8px 16px; /* Adjust button padding for proper size */
+    margin-top: 15px; /* Increase spacing between buttons */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Change primary button color */
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Change secondary button color */
+    border-color: #6c757d;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .login-form {
+        max-width: 100%;
+    }
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    height: 45px; /* Adjust button height */
+}
+
+.btn-success:disabled,
+.btn-danger:disabled {
+    opacity: 0.65; /* Reduce opacity for disabled buttons */
+    pointer-events: none; /* Disable pointer events for disabled buttons */
+}

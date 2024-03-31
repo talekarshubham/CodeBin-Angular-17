@@ -1,0 +1,15 @@
+<!-- home.component.html -->
+<div class="container" *ngIf="codeSnippet">
+    <div class="card">
+      <div class="card-header">
+        {{ codeSnippet.title }}
+      </div>
+      <div class="card-body">
+        <pre>{{ codeSnippet.code }}</pre>
+      </div>
+      <div class="card-footer">
+        Created By: {{ codeSnippet.createdby }}
+      </div>
+    </div>
+  </div>
+  

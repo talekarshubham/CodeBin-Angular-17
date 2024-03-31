@@ -1,0 +1,51 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 15px;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-success {
+    background-color: #28a745; /* Green color for Save button */
+    border-color: #28a745;
+    color: #fff;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Light yellow color for Reset button */
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    background-color: #f5f5f5; /* Light black color for textarea background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    min-height: 150px; /* Adjust min height of textarea */
+}
+
+.text-danger {
+    color: red;
+}

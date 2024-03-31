@@ -1,0 +1,13 @@
+<div class="container" [@noDataAnimation]="noDataState">
+    <div *ngIf="items.length === 0" class="no-data-message">No data available</div>
+    
+    <div class="card" *ngFor="let item of items">
+      <div class="card-header">
+          <a [routerLink]="['/snippet',item.id]">{{ item.title }}</a>
+      </div>
+      <div class="card-body">
+        <pre>{{ item.code }}</pre>
+      </div>
+    </div>
+  </div>
+  
